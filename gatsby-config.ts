@@ -1,40 +1,31 @@
 import type { GatsbyConfig, PluginRef } from "gatsby"
-import "dotenv/config"
-
-const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 const config: GatsbyConfig = {
+  pathPrefix: `HPMUDocs`,
   siteMetadata: {
-    // You can overwrite values here that are used for the SEO component
-    // You can also add new values here to query them like usual
-    // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-cara/gatsby-config.mjs
-    siteTitle: `Cara`,
-    siteTitleAlt: `Cara - Gatsby Starter Portfolio`,
-    siteHeadline: `Cara - Gatsby Theme from @lekoarts`,
-    siteUrl: `https://cara.lekoarts.de`,
-    siteDescription: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations`,
-    siteImage: `/banner.jpg`,
+    siteTitle: `HPMUDocs`,
+    siteTitleAlt: `HPMUDocs | MedPocket`,
+    siteHeadline: `HPMUDocs | by MedPocket`,
+    siteUrl: `https://medpocket.github.io/HPMUDocs`,
+    siteDescription: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations for HPMUDocs`,
+    siteImage: `/og-image.jpg`,
     siteLanguage: `en`,
-    author: `@lekoarts_de`,
+    author: `@torn4dom4n`,
   },
   trailingSlash: `never`,
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-cara`,
-      // See the theme's README for all available options
       options: {},
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Cara - @lekoarts/gatsby-theme-cara`,
-        short_name: `Cara`,
-        description: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations`,
+        name: `HPMUDocs | MedPocket`,
+        short_name: `HPMUDocs`,
+        description: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations for HPMUDocs`,
         start_url: `/`,
         background_color: `#141821`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#f6ad55`,
         display: `standalone`,
         icons: [
           {
@@ -43,20 +34,11 @@ const config: GatsbyConfig = {
             type: `image/png`,
           },
           {
-            src: `/android-chrome-512x512.png`,
-            sizes: `512x512`,
+            src: `/android-chrome-384x384.png`,
+            sizes: `384x384`,
             type: `image/png`,
           },
         ],
-      },
-    },
-    // You can remove this plugin if you don't need it
-    shouldAnalyseBundle && {
-      resolve: `gatsby-plugin-webpack-statoscope`,
-      options: {
-        saveReportTo: `${__dirname}/public/.statoscope/_bundle.html`,
-        saveStatsTo: `${__dirname}/public/.statoscope/_stats.json`,
-        open: false,
       },
     },
   ].filter(Boolean) as Array<PluginRef>,
