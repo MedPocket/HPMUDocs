@@ -7,7 +7,7 @@ const config: GatsbyConfig = {
     siteTitleAlt: `HPMUDocs | MedPocket`,
     siteHeadline: `HPMUDocs | by MedPocket`,
     siteUrl: `https://medpocket.github.io/HPMUDocs`,
-    siteDescription: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations for HPMUDocs`,
+    siteDescription: `HPMUDocs bởi MedPocket - Dự án này nhằm thu thập và sắp xếp tất cả các tài liệu liên quan đến chương trình giảng dạy và nghiên cứu của trường Đại học Y Hải Phòng`,
     siteImage: `/og-image.jpg`,
     siteLanguage: `en`,
     author: `@torn4dom4n`,
@@ -23,7 +23,7 @@ const config: GatsbyConfig = {
       options: {
         name: `HPMUDocs | MedPocket`,
         short_name: `HPMUDocs`,
-        description: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations for HPMUDocs`,
+        description: `HPMUDocs bởi MedPocket - Dự án này nhằm thu thập và sắp xếp tất cả các tài liệu liên quan đến chương trình giảng dạy và nghiên cứu của trường Đại học Y Hải Phòng`,
         start_url: `/`,
         background_color: `#141821`,
         display: `standalone`,
